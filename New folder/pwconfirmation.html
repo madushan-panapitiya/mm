@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<script> 
+		
+			// Function to check Whether both passwords 
+			// is same or not. 
+			function checkPassword(form) { 
+				password1 = form.password1.value; 
+				password2 = form.password2.value; 
+
+				// If password not entered 
+				if (password1 == '') 
+					alert ("Please enter Password"); 
+					
+				// If confirm password not entered 
+				else if (password2 == '') 
+					alert ("Please enter confirm password"); 
+					
+				// If Not same return False.	 
+				else if (password1 != password2) { 
+					alert ("\nPassword did not match: Please try again...") 
+					return false; 
+				} 
+
+				// If same return True. 
+				else{ 
+					alert("Password Match: Welcome to JavaScript Validation!") 
+					return true; 
+				} 
+			} 
+		</script> 
+		
+	</head> 
+	<body> 
+		<div style="border:1px solid #ddd; padding: 5px;">
+
+		<h2>Re-type the password for confirmation</h2>
+		<form onSubmit = "return checkPassword(this)"> 
+			
+				Password: <input type = password name = password1 /> 
+				<br></br>
+				
+				Confirm Password: <input type = password name = password2 /> 
+				<input type = submit value = "Submit" /> 
+		
+		</form> 
+		</div>
+	</body> 
+</html>					 

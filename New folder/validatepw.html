@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>validate password</title> 
+	<script type="text/javascript"> 
+		function test_str() { 
+			
+			var str = document.getElementById("t1").value; 
+			if (str.match(/[a-z]/g) && str.match(/[A-Z]/g) && str.match(/[0-9]/g) && str.match( /[^a-zA-Z\d]/g) && str.length >= 8) {
+				alert('The password has been validated for correct format');
+				return true;
+				}
+			else
+		 {
+		 alert('Please enter coorect password format');
+         return false;
+		 }
+		} 
+	</script> 
+</head> 
+
+<b	<div style="border:1px solid #ddd; padding: 5px;">
+<h2>Input a password and submit</h2>ody> 
+	<div style="border:1px solid #ddd; padding: 5px;">
+<h2>Input a password and submit</h2>
+		Password: <input type="text" id="t1" /> 
+		<br/> 
+		<br/> 
+		<input type="button" value="submit" onclick="test_str()" /> 
+		<br/> 
+	
+</div>
+</body> 
+
+</html> 

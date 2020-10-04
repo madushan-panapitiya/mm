@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"/>
+ <title>JavaScript - Radio buttons and form validation</title>
+ <script type="text/javascript">
+ 
+ // This file will use form validation for forms with radio buttons
+ // Using 'name' in the radio buttons, puts these two radio button options in the same group (the same question)
+ // Value is the text displayed next to the radio button that has been selected
+ // ID identifies this element which can be used by Javascript code
+ 
+ // The isChecked function checks to see if an option has been selected before continuing
+ // .checked is a property of a radio button (that the radio button has been checked)
+ 
+ function isChecked(){
+ var checkedYes = document.getElementById('like').checked;
+ var checkedNo = document.getElementById('dislike').checked;
+ 
+ if(checkedYes == false && checkedNo == false){
+ alert('You need to select an option!');
+ return false;
+ }
+ else{
+ alert ('Your value is saved');
+ return true;
+ }
+ }
+ 
+ </script>
+ 
+</head>
+<body>
+<form action="submission.html" method="get" onsubmit="return isChecked();">
+ <p>Do you like coding?</p>
+ Yes<input type="radio" name="coding" value ="Yes" id="like"/><br/>
+ No<input type="radio" name="coding" value ="No" id="dislike"/><br/>
+ <input type="submit" value="Submit"/>
+</form>
+ 
+</body>
+</html>

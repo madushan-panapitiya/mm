@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <title>JavaScript - Checkboxes</title>
+ <script type="text/javascript">
+ 
+ function isChecked(){
+ var India = document.getElementById('India').checked;
+ var France = document.getElementById('France').checked;
+ var Japan = document.getElementById('Japan').checked;
+ var Sweden = document.getElementById('Sweden').checked;
+ 
+ if(India==false && France == false && Japan==false && Sweden==false){
+ alert('Please select a country!');
+ return false;
+ }
+ else{
+ alert ('Your value is saved');
+ return true;
+ }
+ }
+ 
+ </script>
+ 
+</head>
+<body>
+	<div style="border:1px solid #ddd; padding: 5px;">
+
+<form action="success.html" method="get" onsubmit="return isChecked();">
+ <p>Which countries would you like to visit most?</p>
+ <input type="checkbox" name="countries" value="India" id="India"/>India <br/>
+ <input type="checkbox" name="countries" value="France" id="France"/>France<br/>
+ <input type="checkbox" name="countries" value="Japan" id="Japan"/>Japan<br/>
+ <input type="checkbox" name="countries" value="Sweden" id="Sweden"/>Sweden<br/>
+ <input type="submit" value="Submit"/>
+</form>
+ </div>
+</body>
+</html>

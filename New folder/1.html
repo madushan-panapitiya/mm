@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Javascript Validation</title>
+      <script type = "text/javascript">
+         function validateForm()  {
+             var u = document.getElementById("username").value;
+           
+ 
+             if(u== "") {
+                 alert("Error: Input is empty!");
+                 return false;
+             }
+            
+             alert("All datas are valid!, send it to the server!")
+ 
+             return true;
+         }
+      </script>
+   </head>
+   <body>
+ 
+      <h2>Enter your Username</h2>
+ 
+      <div style="border:1px solid #ddd; padding: 5px;">
+         <form method="GET" action="success.html" onsubmit = "return validateForm()">
+            Username: <input type="text" name="username" id="username"/>
+            <br><br>
+             <button type="submit">Submit</button>
+         </form>
+      </div>
+ 
+   </body>
+</html>

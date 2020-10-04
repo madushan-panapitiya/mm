@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+ <title>JavaScript - Radio buttons and form validation</title>
+ <script type="text/javascript">
+ 
+ function isChecked(){
+ var checkedYes = document.getElementById('like').checked;
+ var checkedNo = document.getElementById('dislike').checked;
+ 
+ if(checkedYes == false && checkedNo == false){
+ alert('You need to select an option!');
+ return false;
+ }
+ else{
+ alert ('Your value is saved');
+ return true;
+ }
+ }
+ 
+ </script>
+ 
+</head>
+<body>
+	<div style="border:1px solid #ddd; padding: 5px;">
+
+<form action="success.html" method="get" onsubmit="return isChecked();">
+ <p>Do you like coding?</p>
+ Yes<input type="radio" name="coding" value ="Yes" id="like"/><br/>
+ No<input type="radio" name="coding" value ="No" id="dislike"/><br/>
+ <input type="submit" value="Submit"/>
+</form>
+ </div>
+</body>
+</html>

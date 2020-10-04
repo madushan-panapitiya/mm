@@ -1,0 +1,32 @@
+function fun(){
+
+			var	sawal= document.getElementById('kamal').value;
+			var	mail= document.getElementById('email').value;
+			var filter = /^[^ ]+@[^ ]+\.[a-z]{3,4}$/;
+			var	pass= document.getElementById('pass').value;
+			var	cpass= document.getElementById('cpass').value;
+
+
+			if (sawal == "") {
+
+				alert("enter name");
+				return false;
+
+			}
+			else if(mail == ''){
+				alert("enter email");
+				return false;
+			}
+			else if(!filter.test(mail)){
+				alert("enter valid mail");
+				return false;
+			}
+			else if(pass == ''){
+				alert("plase enter pass");
+				return false;
+			}
+			else if(pass !== cpass){
+				alert("does not match");
+				return false;
+			}
+		}

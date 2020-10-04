@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>JavaScript form validation - checking email</title>
+<script type = "text/javascript">
+   <!--
+      function validateEmail() {
+         var emailID = document.myForm.EMail.value;
+         atpos = emailID.indexOf("@");
+         dotpos = emailID.lastIndexOf(".");
+         
+         if (atpos < 1 || ( dotpos - atpos < 2 )) {
+            alert("Please enter correct email ID");
+            document.myForm.EMail.focus() ;
+           
+         }
+		 else
+		 {
+		 alert('The input saved');
+         
+      }
+	  }
+   //-->
+</script>
+</head>
+<body>
+
+<div style="border:1px solid #ddd; padding: 5px;">
+<h2>Input an email and Submit</h2>
+<form name="myForm" action="#" onsubmit="validateEmail()">
+Email: <input type='text' name ='EMail'/>
+<br></br>
+
+<button type="submit">Submit</button>
+
+
+
+</form>
+</div>
+
+</body>
+</html>

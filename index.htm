@@ -1,0 +1,44 @@
+</head>
+<body>
+
+	<form onclick="validation()">
+
+
+		<label>Name:</label>
+		<input type="text" name="" id="sawal">
+		<input type="submit" name="submit" >
+
+	</form>
+
+<script type="text/javascript">
+	
+
+function validation() 
+{
+	var nmm = document.getElementById('sawal').value;
+	if (nmm == "") 
+	{
+		alert ("pleas enter name");
+	}
+	else{
+			
+			s=/([a-z])@([a-z]).([a-z])/;
+			if(s.test(nmm)){
+				alert("valid email");
+			}
+			else{
+					alert("invalid email");
+				}
+			}
+}
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

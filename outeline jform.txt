@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="vali.js"></script>
+</head>
+
+
+<body>
+
+	<form onsubmit="return fun()">
+		Name:<input type="text" name="sawal" id="kamal"><br><br>
+		Email:<input type="text" name="email" id="email"><br><br>
+		Password:<input type="password"  id="pass"><br><br>
+		C Password:<input type="password"  id="cpass"><br><br>
+		<input type="submit" name="submit" value="sawal">
+
+
+	</form>
+
+
+	<script type="">
+		
+		
+
+	</script>
+
+</body>
+</html>

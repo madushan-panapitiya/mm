@@ -1,0 +1,116 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>JAVA SCREIPT FORM</title>
+
+<script type="application/javascript">
+	function formvalidation(){
+		
+		var x = document.getElementById("uname").value;
+		var y = document.getElementById("lname").value;
+		var t = document.getElementById("tnum").value;
+		var e = document.getElementById("emailtxt").value;
+		var pas1 = document.getElementById("pswrd1").value;
+		var pas2 = document.getElementById("pswrd2").value;
+		var radyes =document.getElementById("ok").checked; 
+		var radno =document.getElementById("not").checked;
+		
+		 if(x =="" || y==""  ){
+			 
+			 alert("Please Enter Values For This feilds!");
+			 
+			 }
+			 else if(t==""){
+				 
+				 alert("Please Enter TELEPHONE number");
+				 }
+			 
+			 
+			 else if (e==""){
+				 
+				  alert("Please Enter Email ");
+				 }
+
+				 
+			 
+			 else if ( pas1=="" || pas2==""){
+				 
+				 alert("Please Enter Password");
+				 
+				 }
+			 else if(pas1 != pas2) {
+				 
+				 				 alert("Password is not matchin");
+				 }
+				 else if(radyes == false && radno == false){
+					 
+					 alert("Please tell us are you robot or not");
+					 
+					 }
+				 else{
+					 
+					 document.write("First Name:"+x +"<br> Last Name:"+ y +"<br>  TP Number:"+ t + " <br> E mail:"+e + "<br>Password: "+ pas2);
+					 
+					 }
+				 
+				
+		
+	
+		}
+	
+</script>
+
+</head>
+
+<body>
+
+<div style="width:500px; height:auto; background-color:#E9E9E9; margin:50px auto; padding:20px;">
+	<form action="success.html" name="myForm"  >
+		    <label>Name     :</label>
+		    		<input type="text" name="username" id="uname" title="Name">
+		            <br>
+		            <br>
+		    <label>Last Name:</label>
+		    		<input type="text" name="lastname" id="lname" title="Last Name">
+		            <br>
+		            <br>
+		    <label>TP NO    :</label>
+		    		<input type="text" name="tpnumber" id="tnum" title="TP No" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" ><br>
+		            <small>Syntext:071-***-****</small>
+		            <br>
+		            <br>
+		             <label>Email:</label>
+		    		<input type="email" name="Email" id="emailtxt" title="Last Name">
+		            <br>
+		            <br>
+		            <label>Password:</label>
+		    		<input type="password" name="password1" id="pswrd1" title="password1">
+		            <br>
+		            <br>
+		            <label>Conform password:</label>
+		    		<input type="password" name="password2" id="pswrd2" title="password2">
+		            <br>
+		            <br>
+		            <label>Are You Robot?</label>
+		           
+		            Yes<input type="radio" value="YES" id="ok" name="coding">
+		            
+		            No<input type="radio" value="No" id="not" name="coding"><br>
+		    			
+		     <br>
+		    <button onClick="formvalidation()" name="SUBMIT">SUBMIT</button>
+		    
+		    
+				
+    
+    </form>
+
+
+</div>
+
+
+
+
+
+</body>
+</html>
